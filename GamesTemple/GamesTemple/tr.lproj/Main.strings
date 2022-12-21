@@ -1,0 +1,72 @@
+
+/* Class = "UITextField"; placeholder = "Note Header"; ObjectID = "3sL-eY-Mgc"; */
+"3sL-eY-Mgc.placeholder" = "Not Başlığı";
+
+/* Class = "UILabel"; text = "Name :"; ObjectID = "8TV-XM-R3A"; */
+"8TV-XM-R3A.text" = "Adı :";
+
+/* Class = "UILabel"; text = "Description Text"; ObjectID = "Ada-6L-syH"; */
+"Ada-6L-syH.text" = "Description Text";
+
+/* Class = "UIBarButtonItem"; title = "Filter"; ObjectID = "Dng-EP-WYC"; */
+"Dng-EP-WYC.title" = "Filtre";
+
+/* Class = "UINavigationItem"; title = "Your Favorite List"; ObjectID = "Jk9-xR-ehm"; */
+"Jk9-xR-ehm.title" = "Favori Listen";
+
+/* Class = "UIButton"; configuration.title = "Add Note"; ObjectID = "QFx-aw-wHS"; */
+"QFx-aw-wHS.configuration.title" = "Not Ekle";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QFx-aw-wHS"; */
+"QFx-aw-wHS.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Next"; ObjectID = "UnT-lH-PWK"; */
+"UnT-lH-PWK.configuration.title" = "İleri";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UnT-lH-PWK"; */
+"UnT-lH-PWK.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Select a Game"; ObjectID = "Wcq-p1-Bjy"; */
+"Wcq-p1-Bjy.placeholder" = "Bir Oyun Seç";
+
+/* Class = "UILabel"; text = "RatingsCount : "; ObjectID = "Ysc-2y-Qt0"; */
+"Ysc-2y-Qt0.text" = "RatingsCount : ";
+
+/* Class = "UINavigationItem"; title = "Game Detail"; ObjectID = "Z7A-ze-b5S"; */
+"Z7A-ze-b5S.title" = "Oyun Detayı";
+
+/* Class = "UILabel"; text = "Suggestion Count :"; ObjectID = "Za0-2g-VJf"; */
+"Za0-2g-VJf.text" = "Öneri Sayısı :";
+
+/* Class = "UILabel"; text = "Released : "; ObjectID = "dp5-Cm-TRN"; */
+"dp5-Cm-TRN.text" = "Çıkış : ";
+
+/* Class = "UINavigationItem"; title = "Game List"; ObjectID = "e32-LW-9z6"; */
+"e32-LW-9z6.title" = "Oyun Listesi";
+
+/* Class = "UITabBarItem"; title = "Notes"; ObjectID = "jB3-hY-33m"; */
+"jB3-hY-33m.title" = "Notlar";
+
+/* Class = "UILabel"; text = "Rating : "; ObjectID = "jH1-0s-Exl"; */
+"jH1-0s-Exl.text" = "Rating : ";
+
+/* Class = "UITextField"; placeholder = "Enter a Note"; ObjectID = "kWQ-Ud-Cbd"; */
+"kWQ-Ud-Cbd.placeholder" = "Notunu Gir";
+
+/* Class = "UIButton"; configuration.title = "Get Started"; ObjectID = "psi-sR-iGY"; */
+"psi-sR-iGY.configuration.title" = "Başlayalım";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "psi-sR-iGY"; */
+"psi-sR-iGY.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "rsY-Jz-aol"; */
+"rsY-Jz-aol.title" = "Favoriler";
+
+/* Class = "UITabBarItem"; title = "Games"; ObjectID = "tMu-Qs-ALO"; */
+"tMu-Qs-ALO.title" = "Oyunlar";
+
+/* Class = "UINavigationItem"; title = "Notes For Game"; ObjectID = "ul9-6o-Wpr"; */
+"ul9-6o-Wpr.title" = "Oyunlar İçin Notlar";
+
+/* Class = "UILabel"; text = "Genre : "; ObjectID = "yXW-YB-iQl"; */
+"yXW-YB-iQl.text" = "Tür : ";
