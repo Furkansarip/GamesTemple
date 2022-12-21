@@ -66,19 +66,19 @@ Localization Desteği &#x2611;
 
 Launch Screen | First Onboard | Second Onboard | Games List
 :-------------------------: | :-------------------------: | :-------------------------: | :-------------------------:
-![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/launch.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/onboard1.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/onboard2.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/main.png)
+![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/launch.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/onboard1.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/onboard2.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/main.png)
 
 Filter | Search | 2022 Games | Game Detail
 :-------------------------: | :-------------------------: | :-------------------------: | :-------------------------:
-![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/mainFilter.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/mainsearch.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/2022games.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/gameDetail.png)
+![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/mainFilter.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/mainsearch.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/2022games.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/gameDetail.png)
 
 Favorite Game | Favorite List | Note List | Add Note
 :-------------------------: | :-------------------------: | :-------------------------: | :-------------------------: 
-![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/gameDetailFav.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/FavoriteList.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/notes1.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/addNotev2.png) 
+![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/gameDetailFav.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/FavoriteList.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/notes1.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/addNotev2.png) 
 
 Add NoteText | NoteList | Notification | App Logo
 :-------------------------: | :-------------------------: | :-------------------------: | :-------------------------: 
-![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/addNotev3.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/notes2.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/notification.png) | ![Preview](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/final-project-Furkansarip/blob/development/Screenshots/appLogo.png) 
+![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/addNotev3.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/notes2.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/notification.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/appLogo.png) 
 
 
 ## :star2: Video
