@@ -13,6 +13,7 @@ protocol GameListViewModelProtocol {
     func getGameCount() -> Int
     func getGame(at index:Int) -> GamesListModel?
     func getGameId(at index:Int) -> Int?
+    func searchGames(searchText:String)
     func getHighestRating()
     func upcomingGames()
 }
@@ -50,6 +51,19 @@ final class GameListViewModel : GameListViewModelProtocol {
     
     func getGameId(at index: Int) -> Int? {
         return games?[index].id
+    }
+    
+    func searchGames(searchText:String) {
+        NetworkManager.shared.searchGame(searchText: searchText) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let searchedGame):
+                self.games = searchedGame.results
+                self.delegate?.gamesLoaded()
+            case . failure(let error):
+                self.delegate?.gamesFailed(error: error)
+            }
+        }
     }
     
     func getHighestRating() {

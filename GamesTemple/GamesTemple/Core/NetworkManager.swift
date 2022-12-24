@@ -44,6 +44,37 @@ struct NetworkManager {
         task.resume()
     }
     
+    func searchGame(searchText:String,completion:@escaping(_ result:Result<GameResponse,ErrorModel>)->Void){
+        let endpoint = "\(baseURL)?search=\(searchText)&key=\(API_KEY)"
+        print(endpoint)
+        guard let url = URL(string: endpoint) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let _ = error {
+                completion(.failure(.unableToComplete))
+            }
+            guard let response = response as? HTTPURLResponse,response.statusCode == 200 else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let detail = try decoder.decode(GameResponse.self, from: data)
+                completion(.success(detail))
+            } catch {
+                completion(.failure(.invalidData))
+            }
+            
+        }
+        task.resume()
+    }
+    
     
     func highestRating(page:Int,completion:@escaping(_ result:Result<GameResponse,ErrorModel>)->Void){
         let endpoint = "\(baseURL)?key=\(API_KEY)&dates=2001-01-01,2022-12-31&ordering=-rating&page=\(page)"

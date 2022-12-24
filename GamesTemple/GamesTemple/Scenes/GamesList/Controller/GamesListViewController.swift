@@ -80,13 +80,18 @@ final class GamesListViewController: BaseViewController {
 
 extension GamesListViewController : UISearchResultsUpdating,UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
+       
         guard let text = searchController.searchBar.text else { return }
-        viewModel.games = filteredGames?.filter({$0.name.lowercased().contains(text)})
+        //viewModel.games = filteredGames?.filter({$0.name.lowercased().contains(text)})
         if text == "" {
-            viewModel.games = filteredGames
-            
+            viewModel.fetchGames(page: page)
+            gamesTableView.reloadData()
+        } else if text.count > 1 {
+            indicator.startAnimating()
+            viewModel.searchGames(searchText: text)
+            gamesTableView.reloadData()
         }
-        gamesTableView.reloadData()
+        
     }
 }
 
