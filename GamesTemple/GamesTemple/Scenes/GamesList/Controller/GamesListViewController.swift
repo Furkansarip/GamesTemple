@@ -27,6 +27,7 @@ final class GamesListViewController: BaseViewController {
         }
     }
     
+    @IBOutlet weak var genresController: UISegmentedControl!
     @IBOutlet weak var filterItemButton: UIBarButtonItem!
     var gameID : Int?
     var selectedScreenshots = [Screenshots]()
@@ -42,6 +43,8 @@ final class GamesListViewController: BaseViewController {
         configureSearch()
         dropDownMenu.anchorView = filterItemButton
         filteredGames = viewModel.games
+        configureSegmentedController()
+        navigationItem.hidesSearchBarWhenScrolling = false
         indicator.startAnimating()
         
     }
@@ -74,6 +77,31 @@ final class GamesListViewController: BaseViewController {
         search.searchBar.placeholder = "Find a Game"
         search.searchBar.autocapitalizationType = .none
         navigationItem.searchController = search
+    }
+    
+    func configureSegmentedController(){
+        genresController.addTarget(self, action: #selector(changeIndex), for: .valueChanged)
+    }
+    @objc func changeIndex() {
+       let selectedIndex = genresController.selectedSegmentIndex
+        indicator.startAnimating()
+        switch selectedIndex {
+        case 0:
+            viewModel.fetchGames(page: page)
+        case 1:
+            viewModel.searchGenre(genreText: "action")
+            gamesTableView.reloadData()
+        case 2:
+            viewModel.searchGenre(genreText: "racing")
+            gamesTableView.reloadData()
+        case 3:
+            viewModel.searchGenre(genreText: "strategy")
+        case 4:
+            viewModel.searchGenre(genreText: "shooter")
+        default:
+            print("Default")
+        }
+     
     }
     
 }
@@ -131,8 +159,6 @@ extension GamesListViewController : UITableViewDelegate,UITableViewDataSource {
                     page += 1
                     viewModel.fetchGames(page: page)
                     filteredGames?.append(contentsOf: viewModel.games ?? [])
-                    gamesTableView.setContentOffset(.zero, animated: true)
-                    gamesTableView.contentOffset = .zero
                     indicator.startAnimating()
                 }
     }

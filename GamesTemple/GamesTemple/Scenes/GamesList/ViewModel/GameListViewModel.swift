@@ -14,6 +14,7 @@ protocol GameListViewModelProtocol {
     func getGame(at index:Int) -> GamesListModel?
     func getGameId(at index:Int) -> Int?
     func searchGames(searchText:String)
+    func searchGenre(genreText:String)
     func getHighestRating()
     func upcomingGames()
 }
@@ -23,9 +24,9 @@ protocol GameListViewModelDelegate : AnyObject {
     func gamesFailed(error:ErrorModel)
 }
 final class GameListViewModel : GameListViewModelProtocol {
-    
     weak var delegate : GameListViewModelDelegate?
     public var games : [GamesListModel]?
+    public var gamesArray = [GamesListModel]()
     
     func fetchGames(page: Int) {
         NetworkManager.shared.getAllGames(page: page) { [weak self] result in
@@ -34,6 +35,8 @@ final class GameListViewModel : GameListViewModelProtocol {
             switch result {
             case .success(let games):
                 self.games = games.results
+                self.gamesArray.append(contentsOf: games.results)
+                print(self.gamesArray.count)
                 self.delegate?.gamesLoaded()
             case .failure(let error):
                 self.delegate?.gamesFailed(error: error)
@@ -42,11 +45,11 @@ final class GameListViewModel : GameListViewModelProtocol {
     }
     
     func getGameCount() -> Int {
-        return games?.count ?? 0
+        return gamesArray.count
     }
     
     func getGame(at index: Int) -> GamesListModel? {
-        return games?[index]
+        return gamesArray[index]
     }
     
     func getGameId(at index: Int) -> Int? {
@@ -61,6 +64,18 @@ final class GameListViewModel : GameListViewModelProtocol {
                 self.games = searchedGame.results
                 self.delegate?.gamesLoaded()
             case . failure(let error):
+                self.delegate?.gamesFailed(error: error)
+            }
+        }
+    }
+    
+    func searchGenre(genreText: String) {
+        NetworkManager.shared.searchGenre(genreText: genreText) { result in
+            switch result {
+            case .success(let searchedGenres):
+                self.games = searchedGenres.results
+                self.delegate?.gamesLoaded()
+            case .failure(let error):
                 self.delegate?.gamesFailed(error: error)
             }
         }
