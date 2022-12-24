@@ -39,10 +39,11 @@ final class GamesListViewController: BaseViewController {
         super.viewDidLoad()
         gamesTableView.register(UINib(nibName: "GamesTableViewCell", bundle: nil), forCellReuseIdentifier: "GameCell")
         viewModel.delegate = self
+        
         viewModel.fetchGames(page: page)
         configureSearch()
         dropDownMenu.anchorView = filterItemButton
-        filteredGames = viewModel.games
+        filteredGames = viewModel.gamesArray
         configureSegmentedController()
         navigationItem.hidesSearchBarWhenScrolling = false
         indicator.startAnimating()
@@ -87,15 +88,15 @@ final class GamesListViewController: BaseViewController {
         indicator.startAnimating()
         switch selectedIndex {
         case 0:
+            viewModel.gamesArray = []
+            self.page = 1
             viewModel.fetchGames(page: page)
         case 1:
-            viewModel.searchGenre(genreText: "action")
-            gamesTableView.reloadData()
+            viewModel.searchGenre(genreText: "strategy")
         case 2:
             viewModel.searchGenre(genreText: "racing")
-            gamesTableView.reloadData()
         case 3:
-            viewModel.searchGenre(genreText: "strategy")
+            viewModel.searchGenre(genreText: "action")
         case 4:
             viewModel.searchGenre(genreText: "shooter")
         default:
@@ -108,18 +109,17 @@ final class GamesListViewController: BaseViewController {
 
 extension GamesListViewController : UISearchResultsUpdating,UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-       
-        guard let text = searchController.searchBar.text else { return }
+        guard var text = searchController.searchBar.text else { return }
         //viewModel.games = filteredGames?.filter({$0.name.lowercased().contains(text)})
         if text == "" {
-            viewModel.fetchGames(page: page)
-            gamesTableView.reloadData()
+                viewModel.gamesArray = viewModel.games ?? []
+                gamesTableView.reloadData()
         } else if text.count > 1 {
             indicator.startAnimating()
             viewModel.searchGames(searchText: text)
             gamesTableView.reloadData()
+            
         }
-        
     }
 }
 
@@ -158,7 +158,6 @@ extension GamesListViewController : UITableViewDelegate,UITableViewDataSource {
                     LoadingManager().show()
                     page += 1
                     viewModel.fetchGames(page: page)
-                    filteredGames?.append(contentsOf: viewModel.games ?? [])
                     indicator.startAnimating()
                 }
     }

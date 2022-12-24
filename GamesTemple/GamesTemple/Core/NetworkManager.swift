@@ -46,7 +46,6 @@ struct NetworkManager {
     
     func searchGame(searchText:String,completion:@escaping(_ result:Result<GameResponse,ErrorModel>)->Void){
         let endpoint = "\(baseURL)?search=\(searchText)&key=\(API_KEY)"
-        print(endpoint)
         guard let url = URL(string: endpoint) else {
             completion(.failure(.invalidURL))
             return
@@ -77,7 +76,6 @@ struct NetworkManager {
     
     func searchGenre(genreText:String,completion:@escaping(_ result:Result<GameResponse,ErrorModel>)->Void){
         let endpoint = "\(baseURL)?genres=\(genreText)&key=\(API_KEY)"
-        print(endpoint)
         guard let url = URL(string: endpoint) else {
             completion(.failure(.invalidURL))
             return

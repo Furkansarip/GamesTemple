@@ -265,9 +265,9 @@
                                 <rect key="frame" x="16" y="91" width="358" height="32"/>
                                 <segments>
                                     <segment title="All"/>
-                                    <segment title="Action"/>
-                                    <segment title="Racing"/>
                                     <segment title="Strategy"/>
+                                    <segment title="Racing"/>
+                                    <segment title="Action"/>
                                     <segment title="Shooter"/>
                                 </segments>
                             </segmentedControl>

@@ -36,7 +36,6 @@ final class GameListViewModel : GameListViewModelProtocol {
             case .success(let games):
                 self.games = games.results
                 self.gamesArray.append(contentsOf: games.results)
-                print(self.gamesArray.count)
                 self.delegate?.gamesLoaded()
             case .failure(let error):
                 self.delegate?.gamesFailed(error: error)
@@ -61,7 +60,7 @@ final class GameListViewModel : GameListViewModelProtocol {
             guard let self = self else { return }
             switch result {
             case .success(let searchedGame):
-                self.games = searchedGame.results
+                self.gamesArray = searchedGame.results
                 self.delegate?.gamesLoaded()
             case . failure(let error):
                 self.delegate?.gamesFailed(error: error)
@@ -73,7 +72,7 @@ final class GameListViewModel : GameListViewModelProtocol {
         NetworkManager.shared.searchGenre(genreText: genreText) { result in
             switch result {
             case .success(let searchedGenres):
-                self.games = searchedGenres.results
+                self.gamesArray = searchedGenres.results
                 self.delegate?.gamesLoaded()
             case .failure(let error):
                 self.delegate?.gamesFailed(error: error)
