@@ -109,7 +109,7 @@ final class GamesListViewController: BaseViewController {
 
 extension GamesListViewController : UISearchResultsUpdating,UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        guard var text = searchController.searchBar.text else { return }
+        guard let text = searchController.searchBar.text else { return }
         //viewModel.games = filteredGames?.filter({$0.name.lowercased().contains(text)})
         if text == "" {
                 viewModel.gamesArray = viewModel.games ?? []
@@ -118,7 +118,6 @@ extension GamesListViewController : UISearchResultsUpdating,UISearchBarDelegate 
             indicator.startAnimating()
             viewModel.searchGames(searchText: text)
             gamesTableView.reloadData()
-            
         }
     }
 }
