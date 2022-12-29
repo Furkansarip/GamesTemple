@@ -66,11 +66,11 @@ Localization Desteği &#x2611;
 
 Launch Screen | First Onboard | Second Onboard | Games List
 :-------------------------: | :-------------------------: | :-------------------------: | :-------------------------:
-![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/launch.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/onboard1.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/onboard2.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/main.png)
+![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/launch.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/onboard1.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/onboard2.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/gameList.png)
 
 Filter | Search | 2022 Games | Game Detail
 :-------------------------: | :-------------------------: | :-------------------------: | :-------------------------:
-![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/mainFilter.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/mainsearch.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/2022games.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/gameDetail.png)
+![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/filter.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/search.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/2022games.png) | ![Preview](https://github.com/Furkansarip/GamesTemple/blob/main/Screenshots/gameDetail.png)
 
 Favorite Game | Favorite List | Note List | Add Note
 :-------------------------: | :-------------------------: | :-------------------------: | :-------------------------: 
