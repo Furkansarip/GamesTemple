@@ -34,6 +34,7 @@ final class GamesListViewController: BaseViewController {
     var viewModel = GameListViewModel()
     var filteredGames : [GamesListModel]?
     var page = 1
+    var urlText : String?
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,15 +110,16 @@ final class GamesListViewController: BaseViewController {
 
 extension GamesListViewController : UISearchResultsUpdating,UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else { return }
+        guard var text = searchController.searchBar.text else { return }
         //viewModel.games = filteredGames?.filter({$0.name.lowercased().contains(text)})
         if text == "" {
                 viewModel.gamesArray = viewModel.games ?? []
                 gamesTableView.reloadData()
         } else if text.count > 1 {
-            indicator.startAnimating()
-            viewModel.searchGames(searchText: text)
-            gamesTableView.reloadData()
+           urlText = text.replacingOccurrences(of: " ", with: "+")
+                indicator.startAnimating()
+                viewModel.searchGames(searchText: urlText ?? "")
+                gamesTableView.reloadData()
         }
     }
 }
