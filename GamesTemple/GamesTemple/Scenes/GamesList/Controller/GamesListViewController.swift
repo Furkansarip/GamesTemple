@@ -110,7 +110,7 @@ final class GamesListViewController: BaseViewController {
 
 extension GamesListViewController : UISearchResultsUpdating,UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        guard var text = searchController.searchBar.text else { return }
+        guard let text = searchController.searchBar.text else { return }
         //viewModel.games = filteredGames?.filter({$0.name.lowercased().contains(text)})
         if text == "" {
                 viewModel.gamesArray = viewModel.games ?? []
@@ -123,7 +123,6 @@ extension GamesListViewController : UISearchResultsUpdating,UISearchBarDelegate 
         }
     }
 }
-
 
 //MARK: TableView
 extension GamesListViewController : UITableViewDelegate,UITableViewDataSource {
@@ -145,7 +144,7 @@ extension GamesListViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = viewModel.getGameId(at: indexPath.row)
         gameID = id
-        selectedScreenshots = viewModel.games?[indexPath.row].screenshots ?? [] //GameDetail sayfasında bulunan slaytlar için oyun screenshotslarını gönderiyoruz.
+        selectedScreenshots = viewModel.gamesArray[indexPath.row].screenshots //GameDetail sayfasında bulunan slaytlar için oyun screenshotslarını gönderiyoruz.
         gamesTableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "gameDetail", sender: nil)
     }

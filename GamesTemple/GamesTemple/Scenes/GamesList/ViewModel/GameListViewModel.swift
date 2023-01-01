@@ -52,7 +52,7 @@ final class GameListViewModel : GameListViewModelProtocol {
     }
     
     func getGameId(at index: Int) -> Int? {
-        return games?[index].id
+        return gamesArray[index].id
     }
     
     func searchGames(searchText:String) {
@@ -85,7 +85,7 @@ final class GameListViewModel : GameListViewModelProtocol {
             guard let self = self else { return }
             switch result {
             case .success(let ratings):
-                self.games = ratings.results
+                self.gamesArray = ratings.results
                 self.delegate?.gamesLoaded()
             case .failure(let error):
                 self.delegate?.gamesFailed(error: error)
@@ -98,7 +98,7 @@ final class GameListViewModel : GameListViewModelProtocol {
             guard let self = self else { return }
             switch result {
             case .success(let upcoming):
-                self.games = upcoming.results
+                self.gamesArray = upcoming.results
                 self.delegate?.gamesLoaded()
             case . failure(let error):
                 self.delegate?.gamesFailed(error: error)
