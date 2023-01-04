@@ -16,7 +16,7 @@ protocol GameListViewModelProtocol {
     func searchGames(searchText:String)
     func searchGenre(genreText:String)
     func getHighestRating()
-    func upcomingGames()
+    func gamesOf2022()
 }
 
 protocol GameListViewModelDelegate : AnyObject {
@@ -93,7 +93,7 @@ final class GameListViewModel : GameListViewModelProtocol {
         }
     }
     
-    func upcomingGames() {
+    func gamesOf2022() {
         NetworkManager.shared.thisYearGames(page:1) {[weak self] result in
             guard let self = self else { return }
             switch result {
