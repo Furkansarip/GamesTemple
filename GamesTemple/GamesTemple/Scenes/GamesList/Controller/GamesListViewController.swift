@@ -62,7 +62,7 @@ final class GamesListViewController: BaseViewController {
             case "Top 20 Highest Rating":
                 viewModel.getHighestRating()
             case "2022 Games":
-                viewModel.upcomingGames()
+                viewModel.gamesOf2022()
             case "Clear Filter":
                 viewModel.fetchGames(page: 1)
             default:
